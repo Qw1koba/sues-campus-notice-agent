@@ -1,0 +1,31 @@
+{
+  "trace_id": "3bce5bfc0008",
+  "status": "blocked_spam",
+  "input_length": 98,
+  "classification": null,
+  "extraction": null,
+  "spam_check": {
+    "applicable": true,
+    "spam_probability": 0.999448,
+    "risk": "high",
+    "model_version": "sms-spam-hybrid-tfidf-1.0"
+  },
+  "review_required": false,
+  "review_reasons": [],
+  "checklist": [
+    "不要点击链接、回复短信或提供验证码",
+    "通过机构官网或官方客服独立核验",
+    "必要时向运营商或学校安全部门报告"
+  ],
+  "steps": [
+    {
+      "name": "输入校验",
+      "result": "通过；使用本地确定性规则和模型"
+    },
+    {
+      "name": "垃圾短信门禁",
+      "result": "high风险，p=0.999"
+    }
+  ],
+  "error": null
+}

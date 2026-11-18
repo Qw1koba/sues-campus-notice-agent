@@ -1,0 +1,83 @@
+{
+  "trace_id": "6a69bea1841a",
+  "status": "completed",
+  "input_length": 45,
+  "classification": {
+    "category": "课程辅修",
+    "confidence": 0.88,
+    "probabilities": {
+      "课程辅修": 0.29392,
+      "竞赛活动": 0.141978,
+      "校务公告": 0.125014,
+      "考试考务": 0.121846,
+      "毕业创新": 0.111605,
+      "学籍事务": 0.106854,
+      "升学选拔": 0.098783
+    },
+    "model_version": "notice-char-logreg-1.0",
+    "model_category": "课程辅修",
+    "model_confidence": 0.29392,
+    "confidence_source": "model+rule_guard",
+    "guard_category": "课程辅修"
+  },
+  "extraction": {
+    "deadline": {
+      "date": "2026-11-06",
+      "time": null,
+      "sentence": "关于2026年度微专业退改选安排的通知：请在11月6日前登录系统完成退改选，逾期不再受理。",
+      "deadline_cue": false
+    },
+    "all_dates": [
+      {
+        "date": "2026-11-06",
+        "time": null,
+        "sentence": "关于2026年度微专业退改选安排的通知：请在11月6日前登录系统完成退改选，逾期不再受理。",
+        "deadline_cue": false
+      }
+    ],
+    "actions": [
+      "关于2026年度微专业退改选安排的通知：请在11月6日前登录系统完成退改选，逾期不再受理"
+    ],
+    "materials": [],
+    "audience": "未明确",
+    "security_flags": [],
+    "ambiguous_time": false,
+    "extraction_notes": [],
+    "priority": "high"
+  },
+  "spam_check": {
+    "applicable": false,
+    "reason": "文本不是英文/ASCII 短信；中文安全由本地敏感信息规则处理"
+  },
+  "review_required": false,
+  "review_reasons": [],
+  "checklist": [
+    "阅读原文并核对通知对象：未明确",
+    "截止时间：2026-11-06",
+    "执行：关于2026年度微专业退改选安排的通知：请在11月6日前登录系统完成退改选，逾期不再受理",
+    "归档分类：课程辅修"
+  ],
+  "steps": [
+    {
+      "name": "输入校验",
+      "result": "通过；使用本地确定性规则和模型"
+    },
+    {
+      "name": "垃圾短信门禁",
+      "result": "文本不是英文/ASCII 短信；中文安全由本地敏感信息规则处理"
+    },
+    {
+      "name": "机器学习分流",
+      "result": "课程辅修，置信度 0.880"
+    },
+    {
+      "name": "结构化抽取",
+      "result": "截止 2026-11-06，1 条行动"
+    },
+    {
+      "name": "安全复核",
+      "result": "可生成行动清单"
+    }
+  ],
+  "error": null
+}

@@ -1,0 +1,214 @@
+{
+  "dataset": {
+    "total_unique": 118,
+    "classes": 7,
+    "temporal_cutoff": "2025-01-01",
+    "train_size": 77,
+    "test_size": 41,
+    "class_counts": {
+      "竞赛活动": 37,
+      "课程辅修": 23,
+      "考试考务": 18,
+      "毕业创新": 16,
+      "学籍事务": 9,
+      "校务公告": 8,
+      "升学选拔": 7
+    }
+  },
+  "cross_validation": {
+    "majority_baseline": {
+      "test_accuracy": {
+        "mean": 0.43000000000000005,
+        "std": 0.05020790110464023
+      },
+      "test_macro_f1": {
+        "mean": 0.1,
+        "std": 0.008298826628866161
+      },
+      "test_weighted_f1": {
+        "mean": 0.25999999999999995,
+        "std": 0.050622842436083525
+      }
+    },
+    "char_ngram_nb": {
+      "test_accuracy": {
+        "mean": 0.9349999999999999,
+        "std": 0.06465721580423607
+      },
+      "test_macro_f1": {
+        "mean": 0.908507326007326,
+        "std": 0.10840171332302106
+      },
+      "test_weighted_f1": {
+        "mean": 0.9234847374847375,
+        "std": 0.07688574221892328
+      }
+    },
+    "char_ngram_logreg_title_only": {
+      "test_accuracy": {
+        "mean": 0.9358333333333334,
+        "std": 0.07658056759605097
+      },
+      "test_macro_f1": {
+        "mean": 0.9156410256410258,
+        "std": 0.11886627495424854
+      },
+      "test_weighted_f1": {
+        "mean": 0.9274700854700855,
+        "std": 0.08640437221589671
+      }
+    },
+    "char_ngram_logreg_title_body": {
+      "test_accuracy": {
+        "mean": 0.9349999999999999,
+        "std": 0.06465721580423607
+      },
+      "test_macro_f1": {
+        "mean": 0.899618437118437,
+        "std": 0.1076768504743357
+      },
+      "test_weighted_f1": {
+        "mean": 0.9252625152625154,
+        "std": 0.07701613590641826
+      }
+    }
+  },
+  "temporal_holdout": {
+    "model": "char_ngram_logreg_title_body",
+    "ml_only": {
+      "metrics": {
+        "accuracy": 0.6585365853658537,
+        "macro_f1": 0.6412698412698413,
+        "weighted_f1": 0.6466124661246613
+      },
+      "per_class": {
+        "升学选拔": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 7.0
+        },
+        "学籍事务": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 4.0
+        },
+        "校务公告": {
+          "precision": 0.3333333333333333,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.4444444444444444,
+          "support": 3.0
+        },
+        "毕业创新": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 5.0
+        },
+        "竞赛活动": {
+          "precision": 0.2857142857142857,
+          "recall": 1.0,
+          "f1-score": 0.4444444444444444,
+          "support": 4.0
+        },
+        "考试考务": {
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.8,
+          "support": 6.0
+        },
+        "课程辅修": {
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.8,
+          "support": 12.0
+        },
+        "accuracy": 0.6585365853658537,
+        "macro avg": {
+          "precision": 0.6598639455782312,
+          "recall": 0.7142857142857143,
+          "f1-score": 0.6412698412698413,
+          "support": 41.0
+        },
+        "weighted avg": {
+          "precision": 0.7108013937282229,
+          "recall": 0.6585365853658537,
+          "f1-score": 0.6466124661246613,
+          "support": 41.0
+        }
+      }
+    },
+    "hybrid": {
+      "metrics": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0
+      },
+      "per_class": {
+        "升学选拔": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 7.0
+        },
+        "学籍事务": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 4.0
+        },
+        "校务公告": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3.0
+        },
+        "毕业创新": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 5.0
+        },
+        "竞赛活动": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 4.0
+        },
+        "考试考务": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 6.0
+        },
+        "课程辅修": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 12.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 41.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 41.0
+        }
+      }
+    },
+    "confidence_gate": {
+      "threshold": 0.55,
+      "coverage": 1.0,
+      "manual_review_rate": 0.0,
+      "accepted_accuracy": 1.0,
+      "overall_accuracy": 1.0
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "trace_id": "c0973d084238",
+  "status": "review_required",
+  "input_length": 45,
+  "classification": {
+    "category": "毕业创新",
+    "confidence": 0.88,
+    "probabilities": {
+      "毕业创新": 0.280406,
+      "竞赛活动": 0.182241,
+      "考试考务": 0.131377,
+      "课程辅修": 0.125473,
+      "校务公告": 0.09724,
+      "升学选拔": 0.09465,
+      "学籍事务": 0.088612
+    },
+    "model_version": "notice-char-logreg-1.0",
+    "model_category": "毕业创新",
+    "model_confidence": 0.280406,
+    "confidence_source": "model+rule_guard",
+    "guard_category": "毕业创新"
+  },
+  "extraction": {
+    "deadline": null,
+    "all_dates": [],
+    "actions": [
+      "本批次采用线上申请，具体开放时间、截止日期和材料要求另行通知"
+    ],
+    "materials": [],
+    "audience": "未明确",
+    "security_flags": [],
+    "ambiguous_time": true,
+    "extraction_notes": [
+      "未找到明确截止日期",
+      "文本包含待定或需查看附件的时间信息"
+    ],
+    "priority": "unknown"
+  },
+  "spam_check": {
+    "applicable": false,
+    "reason": "文本不是英文/ASCII 短信；中文安全由本地敏感信息规则处理"
+  },
+  "review_required": true,
+  "review_reasons": [
+    "未找到明确截止日期",
+    "截止时间待定或依赖附件"
+  ],
+  "checklist": [
+    "阅读原文并核对通知对象：未明确",
+    "先向发布方确认截止时间，勿按猜测日期安排",
+    "执行：本批次采用线上申请，具体开放时间、截止日期和材料要求另行通知",
+    "归档分类：毕业创新"
+  ],
+  "steps": [
+    {
+      "name": "输入校验",
+      "result": "通过；使用本地确定性规则和模型"
+    },
+    {
+      "name": "垃圾短信门禁",
+      "result": "文本不是英文/ASCII 短信；中文安全由本地敏感信息规则处理"
+    },
+    {
+      "name": "机器学习分流",
+      "result": "毕业创新，置信度 0.880"
+    },
+    {
+      "name": "结构化抽取",
+      "result": "截止 未识别，1 条行动"
+    },
+    {
+      "name": "安全复核",
+      "result": "需要人工确认"
+    }
+  ],
+  "error": null
+}

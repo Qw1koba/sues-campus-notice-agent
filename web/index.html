@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>校讯行动助手</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="/">
+      <span class="brand-mark">校</span>
+      <span><strong>校讯行动助手</strong><small>Campus Notice Agent</small></span>
+    </a>
+    <span class="privacy"><i></i>本地推理 · 不上传第三方</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">从“看见通知”到“知道下一步”</p>
+      <h1>读懂通知，<span>抓住真正要做的事。</span></h1>
+      <p class="lead">识别业务类别与垃圾信息，抽取截止时间和材料要求，生成可核验的行动清单。低置信度内容交给人确认。</p>
+      <div class="capabilities">
+        <span>机器学习分流</span><span>截止时间抽取</span><span>风险门禁</span><span>日历导出</span>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <div class="panel input-panel">
+        <div class="panel-title">
+          <div><span class="step">01</span><h2>粘贴一条通知</h2></div>
+          <button class="ghost" id="sample-button" type="button">载入示例</button>
+        </div>
+        <label for="notice">通知正文</label>
+        <textarea id="notice" placeholder="例如：关于2026年下半年全国大学英语四、六级考试报名的通知……"></textarea>
+        <div class="meta-row">
+          <label for="reference-date">参考日期</label>
+          <input id="reference-date" type="date" value="2026-11-18">
+          <span id="char-count">0 字</span>
+        </div>
+        <button class="primary" id="analyze-button" type="button">
+          <span>分析并生成行动清单</span><b>→</b>
+        </button>
+        <p class="notice">系统只生成提醒，不代替报名、缴费或提交材料。</p>
+      </div>
+
+      <div class="panel result-panel" id="result-panel">
+        <div class="empty-state" id="empty-state">
+          <div class="radar"><span></span><span></span><i></i></div>
+          <h2>等待一条通知</h2>
+          <p>分析结果会展示模型判断、结构化信息、执行步骤和需要人工确认的内容。</p>
+        </div>
+        <div id="result-content" hidden></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>“机器学习”课程期末项目 · Campus Notice Agent</span>
+    <span>本地原型 · 模型版本 1.0</span>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

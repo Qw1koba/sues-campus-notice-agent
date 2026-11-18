@@ -1,0 +1,85 @@
+{
+  "trace_id": "5a894bca4cef",
+  "status": "completed",
+  "input_length": 77,
+  "classification": {
+    "category": "考试考务",
+    "confidence": 0.88,
+    "probabilities": {
+      "考试考务": 0.565626,
+      "课程辅修": 0.106162,
+      "竞赛活动": 0.095977,
+      "毕业创新": 0.063615,
+      "学籍事务": 0.060316,
+      "升学选拔": 0.058446,
+      "校务公告": 0.049858
+    },
+    "model_version": "notice-char-logreg-1.0",
+    "model_category": "考试考务",
+    "model_confidence": 0.565626,
+    "confidence_source": "model+rule_guard",
+    "guard_category": "考试考务"
+  },
+  "extraction": {
+    "deadline": {
+      "date": "2026-11-20",
+      "time": "17:00",
+      "sentence": "【教务处】2026年下半年全国大学英语四、六级考试报名将于11月20日17:00截止。",
+      "deadline_cue": true
+    },
+    "all_dates": [
+      {
+        "date": "2026-11-20",
+        "time": "17:00",
+        "sentence": "【教务处】2026年下半年全国大学英语四、六级考试报名将于11月20日17:00截止。",
+        "deadline_cue": true
+      }
+    ],
+    "actions": [
+      "【教务处】2026年下半年全国大学英语四、六级考试报名将于11月20日17:00截止",
+      "请需要报名的本科生登录教务系统核对学籍信息并完成缴费，逾期不再补报"
+    ],
+    "materials": [],
+    "audience": "未明确",
+    "security_flags": [],
+    "ambiguous_time": false,
+    "extraction_notes": [],
+    "priority": "high"
+  },
+  "spam_check": {
+    "applicable": false,
+    "reason": "文本不是英文/ASCII 短信；中文安全由本地敏感信息规则处理"
+  },
+  "review_required": false,
+  "review_reasons": [],
+  "checklist": [
+    "阅读原文并核对通知对象：未明确",
+    "截止时间：2026-11-20 17:00",
+    "执行：【教务处】2026年下半年全国大学英语四、六级考试报名将于11月20日17:00截止",
+    "执行：请需要报名的本科生登录教务系统核对学籍信息并完成缴费，逾期不再补报",
+    "归档分类：考试考务"
+  ],
+  "steps": [
+    {
+      "name": "输入校验",
+      "result": "通过；使用本地确定性规则和模型"
+    },
+    {
+      "name": "垃圾短信门禁",
+      "result": "文本不是英文/ASCII 短信；中文安全由本地敏感信息规则处理"
+    },
+    {
+      "name": "机器学习分流",
+      "result": "考试考务，置信度 0.880"
+    },
+    {
+      "name": "结构化抽取",
+      "result": "截止 2026-11-20，2 条行动"
+    },
+    {
+      "name": "安全复核",
+      "result": "可生成行动清单"
+    }
+  ],
+  "error": null
+}

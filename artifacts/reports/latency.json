@@ -1,0 +1,9 @@
+{
+  "runs": 60,
+  "warmup_runs": 1,
+  "p50_ms": 0.504,
+  "p95_ms": 0.78,
+  "mean_ms": 0.55,
+  "platform": "macOS-15.3.1-arm64-arm-64bit",
+  "python": "3.10.20"
+}

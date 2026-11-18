@@ -1,0 +1,21 @@
+﻿id,expected_category,predicted_category,category_correct,expected_deadline,predicted_deadline,deadline_correct,expected_review,predicted_review,review_correct,confidence,review_reasons,status
+B01,考试考务,考试考务,True,2026-11-20,2026-11-20,True,False,False,True,0.88,,completed
+B02,学籍事务,学籍事务,True,2026-05-08,2026-05-08,True,False,False,True,0.88,,completed
+B03,竞赛活动,竞赛活动,True,2026-04-12,2026-04-12,True,False,False,True,0.88,,completed
+B04,毕业创新,毕业创新,True,,,True,True,True,True,0.88,未找到明确截止日期；截止时间待定或依赖附件,review_required
+B05,校务公告,校务公告,True,,,True,True,True,True,0.88,未找到明确截止日期；截止时间待定或依赖附件,review_required
+B06,校务公告,校务公告,True,,,True,True,True,True,0.88,未找到明确截止日期,review_required
+B07,升学选拔,升学选拔,True,2026-09-10,2026-09-10,True,False,False,True,0.88,,completed
+B08,课程辅修,课程辅修,True,2026-06-23,2026-06-23,True,False,False,True,0.88,,completed
+B09,毕业创新,毕业创新,True,2026-03-28,2026-03-28,True,False,False,True,0.88,,completed
+B10,考试考务,考试考务,True,2026-11-19,2026-11-19,True,False,False,True,0.88,,completed
+B11,考试考务,考试考务,True,2026-11-25,2026-11-25,True,False,False,True,0.88,,completed
+B12,校务公告,校务公告,True,2026-10-18,2026-10-18,True,False,False,True,0.88,,completed
+B13,校务公告,校务公告,True,,,True,True,True,True,0.88,未找到明确截止日期；截止时间待定或依赖附件,review_required
+B14,校务公告,竞赛活动,False,,,True,True,True,True,0.23579,分类置信度 0.236 低于阈值 0.55；未找到明确截止日期；检测到敏感信息或资金操作风险,review_required
+B15,校务公告,校务公告,True,2026-10-27,2026-10-27,True,False,False,True,0.88,,completed
+B16,课程辅修,课程辅修,True,2026-05-30,2026-05-30,True,False,False,True,0.88,,completed
+B17,竞赛活动,竞赛活动,True,2026-06-05,2026-06-05,True,False,False,True,0.88,,completed
+B18,学籍事务,学籍事务,True,,,True,True,True,True,0.88,未找到明确截止日期,review_required
+B19,课程辅修,课程辅修,True,2026-11-06,2026-11-06,True,False,False,True,0.88,,completed
+B20,升学选拔,升学选拔,True,2026-11-12,2026-11-12,True,False,False,True,0.88,,completed
