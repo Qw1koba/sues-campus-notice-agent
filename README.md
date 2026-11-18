@@ -2,6 +2,8 @@
 
 公开仓库：<https://github.com/Qw1koba/sues-campus-notice-agent>
 
+在线演示页：<https://qw1koba.github.io/sues-campus-notice-agent/>
+
 一个可本地运行的机器学习 Agent 原型：把中文校园通知转换为带截止时间、材料清单和
 待办事项的结构化结果；对英文垃圾短信在生成行动前进行拦截；信息不完整或置信度不足时
 要求人工确认，不自动报名、缴费或提交材料。
