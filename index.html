@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>校讯行动助手 · Campus Notice Agent</title>
+  <style>
+    :root { --ink:#17223b; --muted:#66738d; --blue:#2457e6; --line:#dce5f2; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:linear-gradient(135deg,#f4f8ff,#f8fcff 50%,#effbfa); font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif; }
+    main { width:min(1120px,calc(100% - 32px)); margin:0 auto; padding:54px 0 72px; }
+    .eyebrow { color:var(--blue); font-size:13px; font-weight:750; letter-spacing:.12em; }
+    h1 { margin:14px 0 14px; font-family:"Songti SC",serif; font-size:clamp(42px,7vw,72px); line-height:1.06; letter-spacing:-.04em; }
+    h1 span { color:var(--blue); }
+    .lead { max-width:790px; color:var(--muted); font-size:17px; line-height:1.8; }
+    .actions { display:flex; flex-wrap:wrap; gap:10px; margin:24px 0 34px; }
+    .actions a { text-decoration:none; padding:11px 16px; border-radius:10px; color:white; background:var(--blue); font-weight:700; font-size:13px; }
+    .actions a.secondary { color:#405070; background:white; border:1px solid var(--line); }
+    .metrics { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:24px 0; }
+    .metric { padding:17px; background:rgba(255,255,255,.85); border:1px solid var(--line); border-radius:15px; }
+    .metric strong { display:block; font-size:24px; color:var(--blue); }
+    .metric span { display:block; color:var(--muted); font-size:12px; margin-top:4px; }
+    .shot { display:block; width:100%; border:1px solid var(--line); border-radius:18px; box-shadow:0 24px 70px rgba(42,67,120,.14); }
+    section { margin-top:32px; padding:24px; background:rgba(255,255,255,.88); border:1px solid var(--line); border-radius:18px; }
+    h2 { margin:0 0 12px; font-size:20px; }
+    p,li { color:#4f5e78; line-height:1.75; font-size:14px; }
+    code { background:#eef3fb; padding:2px 6px; border-radius:5px; }
+    footer { margin-top:32px; color:#8a95a8; font-size:12px; }
+    @media(max-width:760px){ .metrics{grid-template-columns:1fr 1fr;} h1{font-size:46px;} }
+  </style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">MACHINE LEARNING COURSE PROJECT</p>
+  <h1>读懂通知，<span>抓住真正要做的事。</span></h1>
+  <p class="lead">一个可本地运行的机器学习 Agent：完成中文校园通知分类、截止时间抽取、材料整理、垃圾短信门禁、人工复核和日历导出。</p>
+  <div class="actions">
+    <a href="https://github.com/Qw1koba/sues-campus-notice-agent">查看代码仓库</a>
+    <a class="secondary" href="https://github.com/Qw1koba/sues-campus-notice-agent/blob/main/DECLARATION.md">项目声明</a>
+    <a class="secondary" href="https://github.com/Qw1koba/sues-campus-notice-agent/blob/main/artifacts/demo/demo_transcript.md">完整演示记录</a>
+  </div>
+  <div class="metrics">
+    <div class="metric"><strong>0.985</strong><span>SMS 测试准确率</span></div>
+    <div class="metric"><strong>0.996</strong><span>SMS ROC-AUC</span></div>
+    <div class="metric"><strong>1.000</strong><span>边界案例日期准确率</span></div>
+    <div class="metric"><strong>0</strong><span>应复核却自动放行</span></div>
+  </div>
+  <img class="shot" src="artifacts/figures/agent_demo.png" alt="校讯行动助手完整运行截图">
+  <section>
+    <h2>系统做什么</h2>
+    <p>输入一条校园通知后，系统通过中文字符 TF-IDF 与逻辑回归进行七类业务分流，再抽取截止日期、材料与行动；英文垃圾短信由词级和字符级 TF-IDF 模型在行动生成前拦截。低置信度、待定时间和敏感信息风险交给人确认。</p>
+  </section>
+  <section>
+    <h2>本地运行</h2>
+    <p><code>python3.10 -m venv .venv</code><br><code>source .venv/bin/activate</code><br><code>pip install -r requirements.txt</code><br><code>PYTHONPATH=src python -m notice_agent.server --port 8765</code></p>
+    <p>浏览器打开 <code>http://127.0.0.1:8765</code>。训练好的模型、测试、实验指标、数据下载与复现步骤均在仓库中。</p>
+  </section>
+  <section>
+    <h2>声明与边界</h2>
+    <p>本页面只展示课程项目演示。公开仓库不包含学号姓名、含个人联系方式的原始通知正文或 API 密钥。系统不代替用户登录、报名、缴费或提交材料，模型结果不用于学籍、考试或处分等高风险自动决策。</p>
+  </section>
+  <footer>基于机器学习的校讯行动助手设计与实现 · 2026</footer>
+</main>
+</body>
+</html>
